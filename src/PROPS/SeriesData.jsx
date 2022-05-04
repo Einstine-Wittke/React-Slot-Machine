@@ -16,10 +16,10 @@ const SeriesData = [
     },
     {
         id: 3,
-        image: "https://besttoppers.com/wp-content/uploads/2020/09/after-life-season-3.jpg",
-        title: "NETFLIX ORIGINAL SERIES",
-        name: "After Life",
-        link: "https://www.netflix.com/in/title/80998491"
+        image: "https://www.inspiredtraveler.ca/wp-content/uploads/2021/05/the-boys-season-3-1140x641.jpeg",
+        title: "AMAZON ORIGINAL SERIES",
+        name: "The Boys 3",
+        link: "https://press.amazonstudios.com/us/en/original-series/the-boys/1"
     },
     {
         id: 4,

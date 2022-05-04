@@ -1,25 +1,60 @@
 import React from 'react'
-import './App.css'
-import Props from './PROPS/Props'
-import SeriesData from './PROPS/SeriesData'
+import './Conditional Rendering/Cond.css'
 
 
-const App = () => {
+const SlotMach = (props) => {
+  // let x = '😃'
+  // let y = '😃'
+  // let z = '😂'
+
+  // let x = props.x
+  // let y = props.y
+  // let z = props.z
+
+  let { x, y, z } = props
+
+
+  if ((x === y) && (y === z)) {
+    return (
+      <>
+        <div className='space'>
+          {x}  {y}   {z}
+        </div>
+        <h6>This is Matching</h6>
+        <hr />
+      </>
+    )
+  } else {
+    return (
+      <>
+        <div className='space'>
+          {x}   {y}   {z}
+        </div>
+        <h6>This is Not Matching </h6>
+        <hr />
+      </>
+    )
+  }
+
+}
+
+
+
+function App() {
   return (
-    <div className='App'>
-      <h1>Top 5 Netflix Series of 2022</h1>
+    <>
+      <div className='App'>
+        <h1 className='heading'>🎰   <span className=' animate-charcter'>Welcome To Slot Machine Game </span> 🎰</h1>
 
-      {SeriesData.map((value,index)=> {
-        console.log(index)
-        return (
-          <Props key={value.id}
-            image={value.image}
-            title={value.title}
-            name={value.name}
-            link={value.link} />
-        )
-      })}
-    </div>
+      </div>
+
+      <div className='slotmachine'>
+        <SlotMach x='🎅' y='🎅' z='🎅' />
+        <SlotMach x='🍗' y='🍩' z='🥩' />
+        <SlotMach x='💔' y='⭕' z='⭕' />
+        <SlotMach x='✅' y='✅' z='✅' />
+      </div>
+    </>
   )
 }
 
