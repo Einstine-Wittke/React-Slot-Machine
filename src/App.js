@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Props from './PROPS/Props'
+import SeriesData from './PROPS/SeriesData'
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>Top 5 Netflix Series of 2022</h1>
+
+      {SeriesData.map((value,index)=> {
+        console.log(index)
+        return (
+          <Props key={value.id}
+            image={value.image}
+            title={value.title}
+            name={value.name}
+            link={value.link} />
+        )
+      })}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
